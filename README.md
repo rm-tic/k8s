@@ -24,6 +24,6 @@ Uma vez criado o secret de autenticação para o repositório privado de imagens
 
 **deploytment.yml**
 ```yaml
-- imagePullSecrets:
+  imagePullSecrets:
     - name: ghcr-secret
 ```
