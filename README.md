@@ -27,3 +27,16 @@ Uma vez criado o secret de autenticação para o repositório privado de imagens
   imagePullSecrets:
     - name: ghcr-secret
 ```
+
+<br>
+
+### Self Healing
+
+#### Liveliness Probe
+Serve para verificar a saude do container batendo em um endpoint de health
+
+#### Readiness Probe
+Verifica se o container está pronto para receber requisições
+
+#### Startup Probe
+Ajusta o tempo de inicialização da aplicação/container
