@@ -1,6 +1,6 @@
 # k8s
 
-### Sugestões Cluster k8s
+## Sugestões Cluster k8s
 
 **Criar dois clusters gerenciados (EKS):**
 - Cluster 01 - Produção (Apartado)
@@ -13,7 +13,7 @@
 
 <br>
 
-### Utilizando Docker Registry Privado (Github)
+## Utilizando Docker Registry Privado (Github)
 
 **Comando**
 ```
@@ -30,13 +30,29 @@ Uma vez criado o secret de autenticação para o repositório privado de imagens
 
 <br>
 
-### Self Healing
+## Self Healing
 
-#### Liveliness Probe
+### Liveliness Probe
 Serve para verificar a saude do container batendo em um endpoint de health
 
-#### Readiness Probe
+### Readiness Probe
 Verifica se o container está pronto para receber requisições
 
-#### Startup Probe
+### Startup Probe
 Ajusta o tempo de inicialização da aplicação/container
+
+<br>
+
+## Volumes
+
+Documentação Oficial: https://kubernetes.io/docs/concepts/storage/volumes <br>
+
+### Access Modes 
+#### ReadWriteOnce
+the volume can be mounted as read-write by a single node. ReadWriteOnce access mode still can allow multiple pods to access the volume when the pods are running on the same node.
+#### ReadOnlyMany
+the volume can be mounted as read-only by many nodes.
+#### ReadWriteMany
+the volume can be mounted as read-write by many nodes.
+#### ReadWriteOncePod
+the volume can be mounted as read-write by a single Pod. Use ReadWriteOncePod access mode if you want to ensure that only one pod across whole cluster can read that PVC or write to it. This is only supported for CSI volumes and Kubernetes version 1.22+.
